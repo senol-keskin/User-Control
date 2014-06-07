@@ -354,4 +354,22 @@ td,
 th {
   padding: 0; }
 
+html {
+  font-size: 1em;
+  line-height: 1.45;
+  color: #444;
+  background: white; }
+
+main {
+  width: 700px;
+  margin: auto; }
+
+div.left {
+  float: left;
+  width: 200px; }
+
+div.content {
+  float: left;
+  width: 500px; }
+
 /*# sourceMappingURL=layout.css.map */

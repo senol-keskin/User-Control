@@ -1,16 +1,23 @@
 ﻿<!doctype html>
-<html ng-app="admin">
+<html ng-app="admin" lang="en">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>User Process</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
     <main>
-        <h1>
-            User Control Panel
-        </h1>
-        <form name="addUser" novalidate>
+        <div class="left">
+        	<ul>
+        		<li><a href="javascript:void(0)">Creat User</a></li>
+        		<li><a href="javascript:void(0)">Creat Group</a></li>
+        	</ul>
+        </div>
+        <div class="content">
+        	<form name="addUser" novalidate>
             <h3>
                 Add User
             </h3>
@@ -26,9 +33,20 @@
                 </select>
             </fieldset>
             <fieldset>
-                <button>Add User</button>
+                <button type="submit">Add User</button>
             </fieldset>
         </form>
+        <form name="createGroup" novalidate>
+        	<h3>Creat Group</h3>
+        	<fieldset>
+        		<label for="groupName">Group Name</label>
+        		<input type="text" id="gorupName">
+        	</fieldset>
+			<fieldset>
+				<button type="submit">Creat Group</button>
+			</fieldset>
+        </form>
+        </div>
     </main>
     <script src="js/angular.js"></script>
     <script src="js/application.js"></script>
