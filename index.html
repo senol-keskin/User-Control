@@ -1,35 +1,36 @@
-<!doctype html>
+﻿<!doctype html>
 <html ng-app="admin">
 <head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/layout.css">
+    <meta charset="utf-8">
+    <title>User Process</title>
+    <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
-	<main>
-		<h1>
-			User Control Panel
-		</h1>
-		<form name="addUser" novalidate>
-			<h3>
-				Add User
-			</h3>
-			<fieldset>
-				<label for="username">User Name</label>
-				<input type="text" id="username" placeholder="User Name">
-			</fieldset>
-			<fieldset>
-				<label for="groupAs">Assign a Group</label>
-				<select name="groupAs" id="groupAs">
-					<option value="software">Software</option>
-					<option value="developer">Developer</option>
-				</select>
-			</fieldset>
-			<fieldset>
-				<button>Add User</button>
-			</fieldset>
-		</form>
-	</main>
-	<script src="js/angular.js"></script>
-	<script src="js/application.js"></script>
-</body>	
+    <main>
+        <h1>
+            User Control Panel
+        </h1>
+        <form name="addUser" novalidate>
+            <h3>
+                Add User
+            </h3>
+            <fieldset>
+                <label for="username">User Name</label>
+                <input type="text" id="username" placeholder="User Name" required>
+            </fieldset>
+            <fieldset>
+                <label for="groupAs">Assign a Group</label>
+                <select name="groupAs" id="groupAs">
+                    <option value="software">Software</option>
+                    <option value="developer">Developer</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <button>Add User</button>
+            </fieldset>
+        </form>
+    </main>
+    <script src="js/angular.js"></script>
+    <script src="js/application.js"></script>
+</body>
 </html>
