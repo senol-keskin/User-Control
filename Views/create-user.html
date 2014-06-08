@@ -1,0 +1,29 @@
+<form name="addUser" novalidate ng-submit="addUser.$valid && registerUser.createUser(registerUser.newUser)">
+    <h3>
+        Add User
+    </h3>
+    <div ng-show="registerUser.newUser.name || registerUser.newUser.group">
+        <h4>Live Preview</h4>
+        <blockquote>
+            <p>
+                <b>User name:</b> <span>{{registerUser.newUser.name}}</span>
+            </p>
+            <p>
+                <b>Group:</b> <span>{{registerUser.newUser.group.name}}</span>
+            </p>
+        </blockquote>
+    </div>
+    <fieldset>
+        <label for="username">User Name</label>
+        <input type="text" id="username" placeholder="User Name" ng-model="registerUser.newUser.name" maxlength="15" ng-minlength="3" required>
+    </fieldset>
+    <fieldset>
+        <label for="groupAs">Assign a Group</label>
+        <select id="groupAs" ng-model="registerUser.newUser.group" ng-options="group.name for group in registerUser.groupsName">
+            <option value="">Select a group</option>
+        </select>
+    </fieldset>
+    <fieldset class="tar">
+        <button class="btn-prim" type="submit">Add User</button>
+    </fieldset>
+</form>

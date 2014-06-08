@@ -1,0 +1,13 @@
+<ul ng-show="groups.getGroups.length">
+	<li ng-repeat="group in groups.getGroups">
+		<div class="g-name">
+			{{group.name}} 
+		</div>
+		<div class="tar prim-btn">
+			<a href="javascript:void(0)" class="btn-delete" ng-click="groups.deleteGroup($index, group.name)">delete this group</a>
+		</div>
+	</li>
+</ul>
+<div class="no-item" ng-hide="groups.getGroups.length">
+	No group has been added yet.
+</div>

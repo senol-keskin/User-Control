@@ -1,0 +1,11 @@
+<form name="addGroup" novalidate ng-submit="addGroup.$valid && registerGroup.createGroup(registerGroup.newGroup)">
+    <h3>Creat Group</h3>
+    {{registerGroup.newGroup.name}}
+    <fieldset>
+        <label for="groupName">Group Name</label>
+        <input type="text" id="groupName" ng-model="registerGroup.newGroup.name" required>
+    </fieldset>
+    <fieldset class="tar">
+        <button class="btn-prim" type="submit">Creat Group</button>
+    </fieldset>
+</form>

@@ -1,0 +1,16 @@
+<main class="clearfix" ng-controller="PanelController as panel">
+    <nav class="left">
+        <ul>
+            <li><a href="javascript:void(0)" ng-class="{active:panel.isTab(1)}" ng-click="panel.setTab(1)">Create User</a></li>
+            <li><a href="javascript:void(0)" ng-class="{active:panel.isTab(2)}" ng-click="panel.setTab(2)">Create Group</a></li>
+            <li><a href="javascript:void(0)" ng-class="{active:panel.isTab(3)}" ng-click="panel.setTab(3)">Edit Users</a></li>
+            <li><a href="javascript:void(0)" ng-class="{active:panel.isTab(4)}" ng-click="panel.setTab(4)">Edit Groups</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+    	<create-user ng-show="panel.isTab(1)"></create-user>
+    	<create-group ng-show="panel.isTab(2)"></create-group>
+    	<created-users ng-show="panel.isTab(3)"></created-users>
+    	<created-groups ng-show="panel.isTab(4)"></created-groups>
+    </div>
+</main>

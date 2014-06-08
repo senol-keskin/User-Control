@@ -1,0 +1,19 @@
+<ul>
+	<li ng-repeat="user in users.getUsers">
+		<b>User name:</b> {{user.name}}
+		<br>
+		<b>Group:</b> {{user.group.name}}
+		<div class="g-select">
+			<label for="e-usergroup-{{$index}}">Change User Group</label>
+	        <select id="e-usergroup-{{$index}}" ng-model="user.group" ng-options="group.name for group in users.getGroups">
+            	<option value="">No group</option>
+        	</select>
+		</div>
+		<div class="tar prim-btn">
+			<a href="javascript:void(0);" class="btn-delete" ng-click="users.deleteUser($index, user.name)">Delete this user</a>
+		</div>
+	</li>
+</ul>
+<div class="no-item" ng-hide="users.getUsers.length">
+	No user has been added yet.
+</div>

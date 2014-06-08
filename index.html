@@ -9,46 +9,11 @@
     <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
-    <main>
-        <div class="left">
-            <ul>
-                <li><a href="javascript:void(0)">Creat User</a></li>
-                <li><a href="javascript:void(0)">Creat Group</a></li>
-            </ul>
-        </div>
-        <div class="content">
-            <form name="addUser" novalidate>
-                <h3>
-                    Add User
-                </h3>
-                <fieldset>
-                    <label for="username">User Name</label>
-                    <input type="text" id="username" placeholder="User Name" required>
-                </fieldset>
-                <fieldset>
-                    <label for="groupAs">Assign a Group</label>
-                    <select name="groupAs" id="groupAs">
-                        <option value="software">Software</option>
-                        <option value="developer">Developer</option>
-                    </select>
-                </fieldset>
-                <fieldset>
-                    <button type="submit">Add User</button>
-                </fieldset>
-            </form>
-            <form name="createGroup" novalidate>
-                <h3>Creat Group</h3>
-                <fieldset>
-                    <label for="groupName">Group Name</label>
-                    <input type="text" id="gorupName">
-                </fieldset>
-                <fieldset>
-                    <button type="submit">Creat Group</button>
-                </fieldset>
-            </form>
-        </div>
-    </main>
+	<div ng-view>
+	    
+    </div>
     <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
     <script src="js/application.js"></script>
 </body>
 </html>
